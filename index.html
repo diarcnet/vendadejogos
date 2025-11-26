@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Download Seguro</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        background: #ffffff;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+    button {
+        padding: 18px 30px;
+        font-size: 18px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+// ALTERE APENAS ESTA LINHA ABAIXO
+// Cole seu link do Archive.org entre as aspas:
+const linkArquivo = "https://archive.org/download/work_010.25.bomba_patch_workin_outubro_2025/WORK_010.25.Bomba%20Patch%20Workin%27%20Outubro%202025.iso";
+
+function baixar() {
+    window.location.href = linkArquivo;
+}
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+    if (e.ctrlKey && ["u","s","p","i","j"].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+
+</head>
+<body>
+    <button onclick="baixar()">Baixar Arquivo</button>
+</body>
+</html>
